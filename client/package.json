@@ -2,12 +2,6 @@
   "name": "client",
   "private": true,
   "version": "0.0.0",
-  "builds": [
-    {
-      "src": "vite build",
-      "use": "@vercel/static-build"
-    }
-  ],
   "type": "module",
   "scripts": {
     "dev": "vite",
