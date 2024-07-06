@@ -9,12 +9,12 @@ const OurServices = () => {
     <div className="container mx-auto mt-12 mb-12">
       <div className="text-center flex items-center justify-center flex-col">
         <h2 className="font-bold mb-4 text-4xl">Our Services</h2>
-        <p className="text-gray-600 line-clamp-2 w-[600px] text-center">
+        <p className="text-gray-600 line-clamp-2 w-[600px] text-center 2sm:w-[350px] 2sm:line-clamp-3 ">
           We offer a wide range of services designed to address the diverse
           financial needs of our clients, including:
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-5 mt-8">
+      <div className="grid grid-cols-3 gap-5 mt-8 2sm:grid-cols-1">
         {/* First Row */}
         <div className="flex items-center justify-center">
           <div className="mr-8 border border-black rounded-full w-16 h-16 flex justify-center items-center">
