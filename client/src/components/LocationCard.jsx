@@ -19,7 +19,7 @@ export const LocationCard = () => {
         allowFullScreen=""
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        className="rounded-md"
+        className="rounded-md 2sm:h-[200px]"
       ></iframe>
       <Link
         to="ContactUs.aspx"

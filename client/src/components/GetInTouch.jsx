@@ -38,9 +38,9 @@ const GetInTouch = () => {
   return (
     <section className="py-12 bg-gray-100">
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row items-center justify-center bg-white p-8 shadow-md">
+        <div className="flex flex-row items-center justify-center bg-white p-8 shadow-md gap-10 2sm:flex-col">
           {/* Form Section */}
-          <div className="w-full lg:w-1/2">
+          <div className="w-1/3 2sm:w-full">
             <div className="text-center mb-8">
               <span className="text-lg">Send a Message</span>
               <h2 className="text-3xl font-bold">Get in Touch</h2>
@@ -107,7 +107,7 @@ const GetInTouch = () => {
             </form>
           </div>
           {/* Image Section */}
-          <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
+          <div className="w-1/2 mb-8 2sm:w-full">
             <img
               src={EnquiryImage}
               alt="EnquiryImage"
