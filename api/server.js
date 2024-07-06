@@ -26,7 +26,7 @@ app.post("/send-email", (req, res) => {
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: "shivanshgtb@gmail.com",
+    to: "expertcaadvisors@gmail.com",
     subject: `Message from ${name}`,
     text: `Name: ${name}\nNumber: ${number}\nEmail: ${email}\nMessage: ${message}`,
   };
