@@ -4,7 +4,7 @@ import AboutUs from "../../public/about-us.jpg";
 export const Why = () => {
   return (
     <div className="flex items-stretch justify-center">
-      <div className="w-1/2">
+      <div className="w-1/2 2sm:w-0">
         <img
           src={AboutUs}
           alt="AboutUs"
@@ -12,13 +12,15 @@ export const Why = () => {
         />
       </div>
 
-      <div className="w-1/2 p-8 bg-gray-100 flex flex-col justify-center">
+      <div className="w-1/2 p-8 bg-gray-100 flex flex-col justify-center 2sm:w-full">
         <div className="text-center">
-          <h3 className="text-xl font-bold mb-4">
+          <h3 className="text-2xl text-[#006b63] font-bold mb-4 2sm:text-start 2sm:mb-1">
             <span>Why You</span>
           </h3>
-          <h2 className="text-3xl font-bold mb-4">Expert CA Advisors</h2>
-          <p className="text-gray-700">
+          <h2 className="text-3xl font-bold mb-4 2sm:text-start ">
+            Expert CA Advisors
+          </h2>
+          <p className="text-gray-700 2sm:text-start ">
             At <strong>Expert CA Advisors</strong>, we are dedicated to
             providing comprehensive financial and accounting services tailored
             to meet the unique needs of each of our clients. With a legacy of
@@ -27,9 +29,9 @@ export const Why = () => {
           </p>
           <Link
             to={"AboutUs.aspx"}
-            className="block mt-4 text-blue-500 hover:underline"
+            className="block mt-4 text-blue-500 hover:underline 2sm:text-start "
           >
-            Readmore
+            Readmore...
           </Link>
         </div>
       </div>
