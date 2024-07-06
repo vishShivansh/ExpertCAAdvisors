@@ -58,8 +58,10 @@ const NewsCard = () => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="bg-blue-500 p-4">
-        <h2 className="text-xl font-bold text-white">Latest News</h2>
+      <div className="bg-[#006b63] p-4">
+        <h2 className="font-bold text-white text-center text-2xl">
+          Latest News
+        </h2>
       </div>
       <div className="relative h-96 overflow-hidden">
         <div

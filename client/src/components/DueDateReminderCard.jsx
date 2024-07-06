@@ -19,8 +19,10 @@ export const DueDateReminderCard = () => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="bg-blue-500 p-4 relative z-10">
-        <h2 className="text-xl font-bold text-white">Due Date Reminder</h2>
+      <div className="bg-[#006b63] p-4 relative z-10">
+        <h2 className="text-2xl font-bold text-white text-center">
+          Due Date Reminder
+        </h2>
       </div>
       <div className="p-4 bg-white relative z-10">
         <table className="w-full mb-4 border-collapse">

@@ -14,11 +14,11 @@ export const Home = () => {
       <OurServices />
       <Why />
       <TeamSection />
-      <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center ">
-        <h1 className="text-4xl font-bold py-7 pb-10">
+      <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
+        <h1 className="text-4xl font-bold py-7 pb-10 2sm:text-center 2sm:text-3xl">
           News, Due Date Reminder, Location
         </h1>
-        <div className="flex">
+        <div className="flex 2sm:flex-col gap-4">
           <NewsCard />
           <DueDateReminderCard />
           <LocationCard />
