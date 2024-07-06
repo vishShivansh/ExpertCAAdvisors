@@ -12,8 +12,10 @@ import { NewsFeed } from "./pages/NewsFeed";
 export default function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <Header2 />
+      <div className="2sm:flex 2sm:flex-row 2sm:items-center 2sm:justify-between">
+        <Header />
+        <Header2 />
+      </div>
 
       <Routes>
         <Route path="/" element={<Home />} />

@@ -13,7 +13,7 @@ export const Header = () => {
           <Link to={"/"}>
             <div className="flex items-center">
               <div className="flex flex-col">
-                <span className="font-bold text-[rgba(32,95,141,255)] text-4xl">
+                <span className="font-bold text-[rgba(32,95,141,255)] text-4xl 2sm:text-3xl">
                   Expert CA Advisors
                 </span>
               </div>
@@ -21,8 +21,8 @@ export const Header = () => {
           </Link>
         </div>
 
-        <div className="absolute inset-0 left-[500px] w-3 bg-[#fde428] transform origin-bottom-right skew-x-12"></div>
-        <div className="absolute flex gap-5 items-center inset-0 left-[511px]  bg-[#006b63] transform origin-bottom-right skew-x-12">
+        <div className="2sm:hidden absolute inset-0 left-[500px] w-3 bg-[#fde428] transform origin-bottom-right skew-x-12"></div>
+        <div className="2sm: hidden absolute flex gap-5 items-center inset-0 left-[511px]  bg-[#006b63] transform origin-bottom-right skew-x-12">
           <img src={phoneLogo} alt="phone" className="ml-5" />
           <div className="flex flex-col">
             <span className="font-bold text-white">+91 7906260658</span>
@@ -60,7 +60,7 @@ export const Header = () => {
             </Link>
           </div>
         </div>
-        <div className="absolute inset-0 left-[1400px] bg-[#006b63]"></div>
+        <div className="2sm: hidden absolute inset-0 left-[1400px] bg-[#006b63]"></div>
       </div>
     </header>
   );
