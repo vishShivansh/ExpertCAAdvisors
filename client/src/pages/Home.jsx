@@ -14,10 +14,15 @@ export const Home = () => {
       <OurServices />
       <Why />
       <TeamSection />
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-        <NewsCard />
-        <DueDateReminderCard />
-        <LocationCard />
+      <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center ">
+        <h1 className="text-4xl font-bold py-7 pb-10">
+          News, Due Date Reminder, Location
+        </h1>
+        <div className="flex">
+          <NewsCard />
+          <DueDateReminderCard />
+          <LocationCard />
+        </div>
       </div>
       <GetInTouch />
     </>
