@@ -44,7 +44,7 @@ export default function Carousel({ children: slides }) {
 
   return (
     <div
-      className="overflow-hidden relative w-full h-[600px]"
+      className="overflow-hidden relative w-full h-[600px] "
       onMouseEnter={() => setOnHover(true)}
       onMouseLeave={() => setOnHover(false)}
     >
@@ -76,22 +76,22 @@ export default function Carousel({ children: slides }) {
           </button>
         </div>
       )}
-      <div className="absolute inset-0 flex flex-col items-center justify-center right-[500px] text-center w-[1/2]  bg-white bg-opacity-40">
-        <h3 className="text-blue-800 font-bold text-3xl pb-2 ">
+      <div className="absolute inset-0 flex flex-col items-center justify-center right-[500px] text-center w-[1/2]  bg-white bg-opacity-40 2sm:w-full 2sm:bg-opacity-75">
+        <h3 className="text-blue-800 font-bold text-3xl pb-2 2sm:text-cyan-900 2sm:text-xl 2sm:w-[400px]">
           WE PROVIDE BEST TAX SOLUTIONS
         </h3>
-        <h1 className="text-[#006b63] font-bold text-4xl pb-2">
+        <h1 className="text-[#006b63] font-bold text-4xl pb-2 2sm:text-3xl 2sm:w-[400px]">
           Expert CA Advisors
         </h1>
-        <div className="w-[500px]">
-          <p className="line-clamp-3 text-lg pb-2 text-black">
+        <div className="w-[500px] 2sm:w-[350px]">
+          <p className="line-clamp-4 text-lg pb-2 text-black 2sm:text-md font-semibold ">
             At Expert CA Advisors, we are dedicated to providing comprehensive
             financial and accounting services tailored to meet the unique needs
             of each of our clients.
           </p>
         </div>
         <Link
-          className="font-bold text-gray-100 border border-black p-2 hover:bg-gray-400 hover:bg-opacity-90"
+          className="font-bold text-gray-100 border border-black p-2 hover:bg-gray-400 hover:bg-opacity-90 2sm:text-gray-400"
           to={"AboutUs.aspx"}
         >
           VIEW SERVICES
