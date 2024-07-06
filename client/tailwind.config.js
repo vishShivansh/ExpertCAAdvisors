@@ -5,7 +5,17 @@ export default {
     screens: {
       "2sm": { max: "500px" },
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        fadeInOut: {
+          "0%, 100%": { opacity: 0 },
+          "50%": { opacity: 1 },
+        },
+      },
+      animation: {
+        fadeInOut: "fadeInOut 3s ease-in-out infinite",
+      },
+    },
   },
 
   plugins: [],
