@@ -12,18 +12,18 @@ export const Header = () => {
       <div className="flex justify-between ">
         <div className=" p-6 left-20">
           <Link to={"/"}>
-            <div className="flex items-center gap-5 w-[600px]">
+            <div className="flex items-center gap-5 w-[600px] 2sm:w-[300px]">
               <img
                 src={ExpertCAAdvisorsLogo}
                 alt="Expert CA Advisors"
-                className="w-20"
+                className="w-20 2sm:w-16"
               />
               <div className="flex flex-col">
-                <span className="font-bold text-black text-5xl 2sm:text-2xl">
+                <span className="font-bold text-black text-5xl 2sm:text-3xl">
                   Expert CA
                 </span>
-                <span className="text-center font-bold text-[rgba(32,95,141,255)] text-2xl">
-                  <span className="text-red-600 ">-----</span>ADVISORS{" "}
+                <span className="text-center font-bold text-[rgba(32,95,141,255)] text-2xl 2sm:text-base">
+                  <span className="text-red-600">-----</span>ADVISORS{" "}
                   <span className="text-red-600">-----</span>
                 </span>
               </div>

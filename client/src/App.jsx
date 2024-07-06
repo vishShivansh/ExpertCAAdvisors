@@ -12,7 +12,7 @@ import { NewsFeed } from "./pages/NewsFeed";
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="2sm:flex 2sm:flex-row 2sm:items-center 2sm:justify-between">
+      <div className="2sm:flex 2sm:flex-row 2sm:items-center 2sm:justify-between 2sm:bg-[#f4f6fc]">
         <Header />
         <Header2 />
       </div>

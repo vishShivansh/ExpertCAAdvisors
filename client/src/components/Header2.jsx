@@ -40,7 +40,7 @@ export const Header2 = () => {
 
   return (
     <div
-      className={`p-4 ml-3 ${
+      className={`p-4 ml-3  ${
         isScrolled
           ? "bg-gray-100 bg-opacity-90 fixed top-0 left-0 right-0 z-50 transition-all duration-300"
           : "bg--gray-100"
@@ -196,7 +196,7 @@ export const Header2 = () => {
             )}
           </div>
         </div>
-        <button className="2sm:block hidden text-black" onClick={toggleMenu}>
+        <button className="2sm:block hidden" onClick={toggleMenu}>
           <Bars3Icon className="w-6 h-6" />
         </button>
       </div>
