@@ -201,7 +201,7 @@ export const Header2 = () => {
         </button>
       </div>
       {isMenuOpen && (
-        <div className="2sm:block absolute mt-4 space-y-2 z-10 right-5 bg-slate-400/10">
+        <div className="2sm:block absolute mt-4 space-y-2 z-20 right-5 bg-slate-400/10">
           <Link to={"/"} className="block text-blue-500">
             Home
           </Link>
