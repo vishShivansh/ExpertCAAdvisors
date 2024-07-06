@@ -13,7 +13,7 @@ export const Header = () => {
           <Link to={"/"}>
             <div className="flex items-center">
               <div className="flex flex-col">
-                <span className="font-bold text-[rgba(32,95,141,255)] text-4xl 2sm:text-3xl">
+                <span className="font-bold text-[rgba(32,95,141,255)] text-4xl 2sm:text-2xl">
                   Expert CA Advisors
                 </span>
               </div>
