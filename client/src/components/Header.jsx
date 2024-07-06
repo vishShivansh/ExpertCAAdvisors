@@ -22,7 +22,7 @@ export const Header = () => {
         </div>
 
         <div className="2sm:hidden absolute inset-0 left-[500px] w-3 bg-[#fde428] transform origin-bottom-right skew-x-12"></div>
-        <div className="2sm: hidden absolute flex gap-5 items-center inset-0 left-[511px]  bg-[#006b63] transform origin-bottom-right skew-x-12">
+        <div className="2sm:hidden absolute flex gap-5 items-center inset-0 left-[511px]  bg-[#006b63] transform origin-bottom-right skew-x-12">
           <img src={phoneLogo} alt="phone" className="ml-5" />
           <div className="flex flex-col">
             <span className="font-bold text-white">+91 7906260658</span>
