@@ -12,7 +12,7 @@ export const Header = () => {
       <div className="flex justify-between ">
         <div className=" p-6 left-20">
           <Link to={"/"}>
-            <div className="flex items-center gap-5 w-[600px] 2sm:w-[300px]">
+            <div className="flex items-center gap-5 w-[600px] 2sm:w-[250px]">
               <img
                 src={ExpertCAAdvisorsLogo}
                 alt="Expert CA Advisors"

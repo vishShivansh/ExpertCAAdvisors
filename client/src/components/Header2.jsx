@@ -40,7 +40,7 @@ export const Header2 = () => {
 
   return (
     <div
-      className={`p-4 ml-3  ${
+      className={`p-4 ml-7  ${
         isScrolled
           ? "bg-gray-100 bg-opacity-90 fixed top-0 left-0 right-0 z-50 transition-all duration-300"
           : "bg--gray-100"
