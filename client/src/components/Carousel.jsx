@@ -48,35 +48,40 @@ export default function Carousel({ children: slides }) {
       onMouseEnter={() => setOnHover(true)}
       onMouseLeave={() => setOnHover(false)}
     >
-      <div
-        className="flex transition-transform ease-linear duration-1000 w-full h-full"
-        style={{
-          transform: `translateX(-${curr * 100}%)`,
-        }}
-      >
+      <div className="flex transition-all ease-linear w-full h-full relative">
         {slides.map((slide, index) => (
-          <div className="w-full h-full flex-shrink-0" key={index}>
+          <div
+            className="absolute inset-0 w-full h-full flex items-center justify-center"
+            key={index}
+            style={{
+              zIndex: index === curr ? 1 : 0,
+              opacity: index === curr ? 1 : 0.5,
+              transform: index === curr ? "scale(1.1)" : "scale(1)",
+              transition: "all 3.5s ease-in-out",
+            }}
+          >
             {slide}
           </div>
         ))}
       </div>
+
       {onHover && (
         <div className="absolute inset-0 flex items-center justify-between p-4">
           <button
             onClick={prev}
-            className="size-10 p-1 shadow bg-blue-700/80 hover:bg-white z-10"
+            className="size-10 p-1 shadow bg-blue-700/80 hover:bg-white z-20"
           >
             <ChevronLeftIcon className="text-white hover:text-blue-700/80" />
           </button>
           <button
             onClick={next}
-            className="size-10 p-1 shadow bg-blue-700/80 hover:bg-white z-10"
+            className="size-10 p-1 shadow bg-blue-700/80 hover:bg-white z-20"
           >
             <ChevronRightIcon className="text-white hover:text-blue-700/80" />
           </button>
         </div>
       )}
-      <div className="absolute inset-0 flex flex-col items-center justify-center right-[500px] text-center w-[1/2]  bg-white bg-opacity-40 2sm:w-full 2sm:bg-opacity-75">
+      <div className="absolute inset-0 flex flex-col items-center justify-center right-[500px] text-center w-[1/2]  bg-white bg-opacity-40 2sm:w-full 2sm:bg-opacity-75 z-10">
         <h3 className="text-blue-800 font-bold text-3xl pb-2 2sm:text-cyan-900 2sm:text-xl 2sm:w-[400px] animate-fadeInOut">
           WE PROVIDE BEST TAX SOLUTIONS
         </h3>

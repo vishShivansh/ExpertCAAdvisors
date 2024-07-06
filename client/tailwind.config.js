@@ -13,7 +13,7 @@ export default {
         },
       },
       animation: {
-        fadeInOut: "fadeInOut 3s ease-in-out infinite",
+        fadeInOut: "fadeInOut 3.5s ease-in-out infinite",
       },
     },
   },
