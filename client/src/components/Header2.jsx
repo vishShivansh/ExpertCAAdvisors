@@ -63,7 +63,7 @@ export const Header2 = () => {
           <Link to={"/ContactUs.aspx"} className="text-blue-500">
             Contact Us
           </Link>
-          <div className="relative z-10">
+          <div className="relative z-20">
             <button
               onClick={toggleDropdown1}
               className="flex items-center text-blue-500"
@@ -110,7 +110,7 @@ export const Header2 = () => {
               </div>
             )}
           </div>
-          <div className="relative z-10">
+          <div className="relative z-20">
             <button
               onClick={toggleDropdown2}
               className="flex items-center text-blue-500"
