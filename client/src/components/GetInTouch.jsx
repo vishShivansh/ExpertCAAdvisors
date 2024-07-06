@@ -15,24 +15,33 @@ const GetInTouch = () => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Construct the mailto link with the form data
-    const mailtoLink = `mailto:expertcaadvisors@gmail.com?subject=Message from ${name}&body=${encodeURIComponent(
-      message
-    )}`;
+    try {
+      const response = await fetch("http://localhost:5000/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    // Open the user's default email client with the pre-filled message
-    window.location.href = mailtoLink;
-
-    // Clear the form after submission
-    setFormData({
-      name: "",
-      number: "",
-      email: "",
-      message: "",
-    });
+      if (response.ok) {
+        alert("Message sent successfully!");
+        setFormData({
+          name: "",
+          number: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred. Please try again.");
+    }
   };
 
   return (
