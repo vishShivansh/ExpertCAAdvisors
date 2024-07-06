@@ -53,7 +53,7 @@ const NewsCard = () => {
 
   return (
     <div
-      className="flex-1 mx-2 bg-white shadow-lg rounded-lg overflow-hidden"
+      className="flex-1 mx-2 bg-white shadow-lg rounded-lg overflow-hidden 2sm:ml-[200px]"
       style={{ height: "400px" }} // Adjust height as needed
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

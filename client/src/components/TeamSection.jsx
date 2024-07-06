@@ -1,6 +1,6 @@
 const TeamSection = () => {
   return (
-    <section className="flex items-center justify-center h-[500px] bg-white">
+    <section className="flex items-center justify-center h-[500px] bg-white ">
       <div className="w-3/4 2sm:w-[400px]">
         <div className="text-center">
           <div className="max-w-2xl mx-auto">

@@ -196,10 +196,7 @@ export const Header2 = () => {
             )}
           </div>
         </div>
-        <button
-          className="2sm:block hidden 2sm:absolute 2sm:right-1"
-          onClick={toggleMenu}
-        >
+        <button className="2sm:block hidden 2sm:right-1" onClick={toggleMenu}>
           <Bars3Icon className="w-6 h-6" />
         </button>
       </div>

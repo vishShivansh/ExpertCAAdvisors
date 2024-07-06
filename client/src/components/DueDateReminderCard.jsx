@@ -14,12 +14,12 @@ export const DueDateReminderCard = () => {
 
   return (
     <div
-      className="flex-1 mx-2 bg-white shadow-lg rounded-lg overflow-hidden"
+      className="flex-1 mx-2 bg-white shadow-lg rounded-lg overflow-hidden 2sm:ml-[200px]"
       style={{ height: "400px" }} // Adjust height as needed
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="bg-[#006b63] p-4 relative z-10">
+      <div className="bg-[#006b63] p-4 relative z-10 ">
         <h2 className="text-2xl font-bold text-white text-center">
           Due Date Reminder
         </h2>
@@ -79,6 +79,7 @@ export const DueDateReminderCard = () => {
           </div>
         ))}
       </div>
+
       <Link
         to="DuedateAll.aspx"
         className="relative block p-4 bg-gray-50 text-blue-500 text-start hover:bg-gray-100"

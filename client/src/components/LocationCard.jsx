@@ -13,13 +13,10 @@ export const LocationCard = () => {
       </div>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d872.484367662201!2d77.70381846956298!3d28.989223871546216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c64fe102f6fc5%3A0xe4f5397409c3c3a1!2s112%2F2%2C%20Thapar%20Nagar%2C%20Lajpat%20Bazaar%2C%20Thapar%20Nagar%2C%20Meerut%2C%20Uttar%20Pradesh%20250001!5e0!3m2!1sen!2sin!4v1720292670713!5m2!1sen!2sin"
-        width="600"
-        height="280"
-        style={{ border: 0 }}
         allowfullscreen=""
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        className="rounded-md 2sm:h-[200px]"
+        className="rounded-md 2sm:h-[280px] w-[600px] h-[280px]"
       ></iframe>
       <Link
         to="ContactUs.aspx"
