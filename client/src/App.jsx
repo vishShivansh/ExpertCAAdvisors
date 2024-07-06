@@ -1,4 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Header } from "./components/Header.jsx";
+import { Header2 } from "./components/Header2.jsx";
+
+import { Footer } from "./components/Footer.jsx";
 import About from "./pages/About";
 import { Career } from "./pages/Career";
 import { ContactUs } from "./pages/ContactUs";
@@ -8,6 +12,9 @@ import { NewsFeed } from "./pages/NewsFeed";
 export default function App() {
   return (
     <BrowserRouter>
+      <Header />
+      <Header2 />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/AboutUs.aspx" element={<About />} />
@@ -15,6 +22,7 @@ export default function App() {
         <Route path="/Career.aspx" element={<Career />} />
         <Route path="/ContactUs.aspx" element={<ContactUs />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
