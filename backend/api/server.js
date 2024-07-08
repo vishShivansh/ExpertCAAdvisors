@@ -11,14 +11,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
-app.use(
-  cors({
-    origin: "http://expertcaadvisors.com",
-    methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type"],
-  })
-);
-app.options("/send-email", cors());
+app.use(cors());
 
 // Email sending endpoint
 app.post("/send-email", async (req, res) => {
