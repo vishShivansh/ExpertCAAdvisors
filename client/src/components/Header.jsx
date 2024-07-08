@@ -4,7 +4,7 @@ import ExpertCAAdvisorsLogo from "../../public/Expert CA2.png";
 import FaceBookLogo from "../../public/facebook-f.svg";
 import phoneLogo from "../../public/phonelogo.png";
 import TwitterLogo from "../../public/twitter.svg";
-import WhatsappLogo from "../../public/whatsapp.svg";
+import { WhatsAppButton } from "./WhatsAppButton";
 
 export const Header = () => {
   return (
@@ -53,11 +53,7 @@ export const Header = () => {
           </div>
 
           <div className="flex gap-2">
-            <Link>
-              <div className="bg-white rounded-full w-10 h-10 flex items-center justify-center">
-                <img src={WhatsappLogo} alt="Whatsapp" className="w-5" />
-              </div>
-            </Link>
+            <WhatsAppButton />
             <Link>
               <div className="bg-white rounded-full w-10 h-10 flex items-center justify-center">
                 <img src={FaceBookLogo} alt="FaceBook" className="w-5" />
