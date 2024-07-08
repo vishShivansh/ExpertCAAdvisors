@@ -1,13 +1,14 @@
-const express = require("express");
-const nodemailer = require("nodemailer");
-const bodyParser = require("body-parser");
-const cors = require("cors");
+/* eslint-disable no-undef */
+import { json } from "body-parser";
+import cors from "cors";
+import express from "express";
+import { createTransport } from "nodemailer";
 require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(bodyParser.json());
+app.use(json());
 app.use(cors());
 
 // Email sending endpoint
@@ -16,7 +17,7 @@ app.post("/send-email", (req, res) => {
   const { name, number, email, message } = req.body;
 
   // Create a transporter object using the default SMTP transport
-  const transporter = nodemailer.createTransport({
+  const transporter = createTransport({
     service: "Gmail",
     auth: {
       user: process.env.EMAIL_USER,
@@ -26,7 +27,7 @@ app.post("/send-email", (req, res) => {
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: "expertcaadvisors@gmail.com",
+    to: "shivanshgtb@gmail.com",
     subject: `Message from ${name}`,
     text: `Name: ${name}\nNumber: ${number}\nEmail: ${email}\nMessage: ${message}`,
   };
