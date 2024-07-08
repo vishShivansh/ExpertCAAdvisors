@@ -2,6 +2,10 @@
 import { useState } from "react";
 import EnquiryImage from "../../public/enquery.jpg";
 
+// process.env.NODE_ENV === "production"
+// ? "https://backend-iek6ov2os-shivansh-guptas-projects-acc2e36d.vercel.app/send-email" ||
+// : "http://localhost:5000/send-email";
+
 const GetInTouch = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -18,11 +22,7 @@ const GetInTouch = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const apiUrl =
-      process.env.NODE_ENV === "production"
-        ? "https://backend-iek6ov2os-shivansh-guptas-projects-acc2e36d.vercel.app/send-email" ||
-          "https://expert-ca-advisors.vercel.app/"
-        : "http://localhost:5000/send-email";
+    const apiUrl = "https://expert-ca-advisors.vercel.app/";
 
     try {
       const response = await fetch(apiUrl, {
