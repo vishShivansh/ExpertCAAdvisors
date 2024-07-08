@@ -1,5 +1,5 @@
 import bodyParser from "body-parser";
-import cors from "cors";
+// import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
 import nodemailer from "nodemailer";
@@ -11,19 +11,19 @@ const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 
-const allowedOrigins = ["https://expert-ca-advisors.vercel.app"];
-const corsOptions = {
-  origin: (origin, callback) => {
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type"],
-};
-app.use(cors(corsOptions));
+// const allowedOrigins = ["https://expert-ca-advisors.vercel.app"];
+// const corsOptions = {
+//   origin: (origin, callback) => {
+//     if (allowedOrigins.includes(origin)) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error("Not allowed by CORS"));
+//     }
+//   },
+//   methods: ["GET", "POST"],
+//   allowedHeaders: ["Content-Type"],
+// };
+// app.use(cors(corsOptions));
 
 // Email sending endpoint
 app.post("/send-email", (req, res) => {
