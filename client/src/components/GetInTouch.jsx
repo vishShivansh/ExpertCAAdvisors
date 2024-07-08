@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { useState } from "react";
 import EnquiryImage from "../../public/enquery.jpg";
 
@@ -17,9 +18,13 @@ const GetInTouch = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    const apiUrl =
+      process.env.NODE_ENV === "production"
+        ? "https://backend-ikmmxn6il-shivansh-guptas-projects-acc2e36d.vercel.app/send-email" // Replace with your actual deployed backend URL
+        : "http://localhost:5000/send-email";
 
     try {
-      const response = await fetch("http://192.168.1.56:5000/send-email", {
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

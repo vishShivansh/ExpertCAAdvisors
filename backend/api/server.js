@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: "*", // Allow all origins. Adjust this as needed for your production environment.
+    origin: "http://expertcaadvisors.com/", // Allow all origins. Adjust this as needed for your production environment.
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   })
