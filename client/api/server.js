@@ -9,7 +9,13 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "*", // Allow all origins. Adjust this as needed for your production environment.
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
 
 // Email sending endpoint
 app.post("/send-email", (req, res) => {
