@@ -1,15 +1,16 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-const nodemailer = require("nodemailer");
-require("dotenv").config();
+import bodyParser from "body-parser";
+import cors from "cors";
+import dotenv from "dotenv";
+import express from "express";
+import nodemailer from "nodemailer";
+
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(json());
+app.use(bodyParser.json());
 app.use(
   cors({
     origin: "*", // Allow all origins. Adjust this as needed for your production environment.
@@ -24,7 +25,7 @@ app.post("/send-email", (req, res) => {
   const { name, number, email, message } = req.body;
 
   // Create a transporter object using the default SMTP transport
-  const transporter = createTransport({
+  const transporter = nodemailer.createTransport({
     service: "Gmail",
     auth: {
       user: process.env.EMAIL_USER,
