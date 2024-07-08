@@ -1,18 +1,27 @@
-const express = require("express");
-const nodemailer = require("nodemailer");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-require("dotenv").config();
+import bodyParser from "body-parser";
+import cors from "cors";
+import dotenv from "dotenv";
+import express from "express";
+import nodemailer from "nodemailer";
+
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
-app.use(cors());
+
+const corsOptions = {
+  origin: "https://expert-ca-advisors.vercel.app/", // Allow your frontend domain without trailing slash
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"],
+};
+app.use(cors(corsOptions));
 
 // Email sending endpoint
 app.post("/send-email", (req, res) => {
-  console.log(req.body);
+  console.log("Received request:", req.body); // Log the request body
+
   const { name, number, email, message } = req.body;
 
   // Create a transporter object using the default SMTP transport
@@ -33,10 +42,10 @@ app.post("/send-email", (req, res) => {
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      console.error("Error sending email:", error);
+      console.error("Error sending email:", error); // Log the error
       return res.status(500).send("Failed to send message. Please try again.");
     }
-    console.log("Email sent:", info.response);
+    console.log("Email sent:", info.response); // Log the response
     res.status(200).send("Email sent successfully!");
   });
 });
