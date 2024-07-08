@@ -19,9 +19,9 @@ const GetInTouch = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const apiUrl =
-      process.env.NODE_ENV === "production"
-        ? "https://backend-ikmmxn6il-shivansh-guptas-projects-acc2e36d.vercel.app/send-email" // Replace with your actual deployed backend URL
-        : "http://localhost:5000/send-email";
+      // process.env.NODE_ENV === "production"
+      "https://backend-iek6ov2os-shivansh-guptas-projects-acc2e36d.vercel.app/send-email"; // Replace with your actual deployed backend URL
+    // : "http://localhost:5000/send-email";
 
     try {
       const response = await fetch(apiUrl, {
@@ -30,6 +30,7 @@ const GetInTouch = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
+        mode: "no-cors",
       });
 
       if (response.ok) {
