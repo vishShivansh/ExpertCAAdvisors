@@ -16,14 +16,13 @@ export const LocationCard = () => {
         allowfullscreen=""
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        className="rounded-md 2sm:h-[280px] w-[600px] h-[280px]"
+        className="rounded-md 2sm:h-[280px] w-[450px] h-[280px] m-5 hover:border hover:border-blue-700 2sm:w-[330px]"
       ></iframe>
-      <Link
-        to="ContactUs.aspx"
-        className="block p-4 bg-gray-50 text-blue-500 text-start hover:bg-gray-100"
-      >
-        Read more...
-      </Link>
+      <div className="relative flex bottom-8 bg-gray-50 text-blue-500 items-center hover:bg-gray-100 2sm:top-[2px]">
+        <Link to="ContactUs.aspx" className="p-4">
+          Read more...
+        </Link>
+      </div>
     </div>
   );
 };

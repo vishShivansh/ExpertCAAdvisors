@@ -53,7 +53,7 @@ const NewsCard = () => {
 
   return (
     <div
-      className="flex-1 mx-2 bg-white shadow-lg rounded-lg overflow-hidden 2sm:ml-[200px]"
+      className="flex-1 mx-2 bg-white shadow-lg rounded-lg overflow-hidden "
       style={{ height: "400px" }} // Adjust height as needed
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -82,13 +82,11 @@ const NewsCard = () => {
           ))}
         </div>
       </div>
-
-      <Link
-        to={"#"}
-        className="relative block p-4 bg-gray-50 text-blue-500 text-start hover:bg-red-700"
-      >
-        Read more...
-      </Link>
+      <div className="relative h-12 bottom-24 bg-gray-50 text-blue-500 flex items-center hover:bg-gray-100 2sm:top-[1px]">
+        <Link to={"#"} className="p-4">
+          Read more...
+        </Link>
+      </div>
     </div>
   );
 };
