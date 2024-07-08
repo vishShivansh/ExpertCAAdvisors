@@ -11,10 +11,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://expert-ca-advisors.vercel.app",
-];
+const allowedOrigins = ["https://expert-ca-advisors.vercel.app"];
 const corsOptions = {
   origin: (origin, callback) => {
     if (allowedOrigins.includes(origin)) {
