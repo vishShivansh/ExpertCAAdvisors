@@ -1,3 +1,25 @@
+// SSL certificate files
+// const privateKey = fs.readFileSync(
+//   "/home4/exper2e1/ssl/keys/ec-e3e97217a3_9f886bfdc71192eafb29aceb19f7d737.key",
+//   "utf8"
+// );
+// const certificate = fs.readFileSync(
+//   "/home4/exper2e1/ssl/certs/ec-expertcaadvisors_com_e3e97217a3_1728205107_5e165ab2acdca379971cf4c89b48cbd0.crt",
+//   "utf8"
+// );
+// const credentials = { key: privateKey, cert: certificate };
+
+// Create HTTPS server
+// const httpsServer = https.createServer(credentials, app);
+
+// Start server
+// httpsServer.listen(PORT, "0.0.0.0", () => {
+//   console.log(`Server is running on port ${PORT}`);
+// });
+
+// import fs from "fs";
+// import https from "https";
+
 import bodyParser from "body-parser";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -85,3 +107,4 @@ app.post("/send-email", (req, res) => {
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
