@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import EnquiryImage from "../../public/enquery.jpg";
 
 const GetInTouch = () => {
@@ -15,6 +15,22 @@ const GetInTouch = () => {
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
+
+  useEffect(() => {
+    fetch("http://localhost:5000/test")
+      .then((response) => {
+        if (response.ok) {
+          return response.text();
+        }
+        throw new Error("Network response was not ok.");
+      })
+      .then((data) => {
+        console.log("Success:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
